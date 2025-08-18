@@ -1,9 +1,10 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useAuthStore } from '@/app/store/auth.store';
 
 const MainLayout = () => {
 	const { pathname } = useLocation();
-	// const { authenticated } = useAuthStore();
+	const { isAuthenticated } = useAuthStore();
 
 	useEffect(() => {
 		document.getElementById('app-layout')?.scrollTo({
@@ -13,7 +14,7 @@ const MainLayout = () => {
 		});
 	}, [pathname]);
 
-	// if (!authenticated && pathname.startsWith('/app/')) return <Navigate to={'/'} />;
+	if (!isAuthenticated && pathname.startsWith('/app/')) return <Navigate to={'/auth/login'} />;
 
 	return (
 		<div id="app-layout" className="bg-v1-background flex h-dvh flex-col overflow-x-hidden">

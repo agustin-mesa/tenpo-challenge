@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '@/layouts/MainLayout';
-import PublicLayout from '@/layouts/PublicLayout';
+import AuthLayout from '@/layouts/AuthLayout';
 import PrivateLayout from '@/layouts/PrivateLayout';
 import LoginPage from '@/modules/auth/pages/LoginPage';
-import HomePage from '@/modules/home/pages/HomePage';
+import TransactionsPage from '@/modules/transactions/pages/TransactionsPage';
 import { ProtectedRoute } from '@/app/router/ProtectedRoute';
 
 export const appRouter = createBrowserRouter([
@@ -14,7 +14,7 @@ export const appRouter = createBrowserRouter([
 		children: [
 			{
 				path: 'auth',
-				element: <PublicLayout />,
+				element: <AuthLayout />,
 				children: [{ path: 'login', element: <LoginPage /> }]
 			},
 			{
@@ -26,8 +26,8 @@ export const appRouter = createBrowserRouter([
 				),
 				children: [
 					{
-						path: 'home',
-						element: <HomePage />
+						path: 'transactions',
+						element: <TransactionsPage />
 					}
 				]
 			}

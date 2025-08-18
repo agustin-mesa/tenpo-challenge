@@ -2,7 +2,6 @@
 @import "tailwindcss";
 
 :root {
-  font-family: 'DM Sans', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -12,10 +11,67 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+@theme {
+  --color-v1-neutral-0: #ffffff;
+  --color-v1-neutral-50: #f6f6f6;
+  --color-v1-neutral-100: #e7e7e7;
+  --color-v1-neutral-200: #d1d1d1;
+  --color-v1-neutral-300: #b0b0b0;
+  --color-v1-neutral-400: #888888;
+  --color-v1-neutral-500: #6d6d6d;
+  --color-v1-neutral-600: #5d5d5d;
+  --color-v1-neutral-700: #4f4f4f;
+  --color-v1-neutral-800: #454545;
+  --color-v1-neutral-900: #3d3d3d;
+  --color-v1-neutral-950: #000000;
+
+  --color-v1-primary-50: #edfff7;
+  --color-v1-primary-100: #d5ffee;
+  --color-v1-primary-200: #aeffdd;
+  --color-v1-primary-300: #70ffc4;
+  --color-v1-primary-400: #2bfda4;
+  --color-v1-primary-500: #03ff94;
+  --color-v1-primary-600: #00c06a;
+  --color-v1-primary-700: #009656;
+  --color-v1-primary-800: #067547;
+  --color-v1-primary-900: #07603c;
+  --color-v1-primary-950: #003720;
+
+  --color-v1-success-100: #F1FFF4;
+  --color-v1-success-200: #A7F3D0;
+  --color-v1-success-300: #6EE7B7;
+  --color-v1-success-400: #41CD84;
+  --color-v1-success-600: #5D836F;
+  --color-v1-success-800: #065F46;
+  --color-v1-success-900: #064E3B;
+
+  --color-v1-warn-100: #FFF6E9;
+  --color-v1-warn-400: #FF9A07;
+  --color-v1-warn-600: #92611B;
+
+  --color-v1-error-100: #FFF0F0;
+  --color-v1-error-300: #FFACAC;
+  --color-v1-error-400: #FF5959;
+  --color-v1-error-600: #943F3F;
+
+  --color-v1-info-100: #F2FAFF;
+  --color-v1-info-300: #7DD3FC;
+  --color-v1-info-400: #37A6F3;
+  --color-v1-info-600: #257EBB;
+  --color-v1-info-800: #075985;
+
+  --color-v1-background: var(--color-v1-neutral-0);
+}
+
+* {
+  font-family: 'DM Sans', sans-serif;
+
 
   font-optical-sizing: auto;
   scroll-behavior: smooth;
@@ -31,4 +87,11 @@
   -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
 }
