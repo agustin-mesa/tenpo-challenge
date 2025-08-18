@@ -5,12 +5,12 @@ import PrivateLayout from '@/layouts/PrivateLayout';
 import LoginPage from '@/modules/auth/pages/LoginPage';
 import TransactionsPage from '@/modules/transactions/pages/TransactionsPage';
 import { ProtectedRoute } from '@/app/router/ProtectedRoute';
+import NotFound from './shared/components/NotFound';
 
 export const appRouter = createBrowserRouter([
 	{
 		path: '/',
 		element: <MainLayout />,
-		errorElement: <>Not found</>,
 		children: [
 			{
 				path: 'auth',
@@ -35,6 +35,6 @@ export const appRouter = createBrowserRouter([
 	},
 	{
 		path: '*',
-		element: <>Not found</>
+		element: <NotFound />
 	}
 ]);
