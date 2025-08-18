@@ -33,8 +33,7 @@ export class APIError extends Error {
 }
 
 class ApiClient {
-	private static readonly baseURL =
-		import.meta.env.VITE_API_URL || 'https://jsonplaceholder.typicode.com';
+	private static readonly baseURL = import.meta.env.VITE_API_URL;
 
 	public axiosInstance: AxiosInstance;
 

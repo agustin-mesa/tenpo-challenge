@@ -1,69 +1,344 @@
-# React + TypeScript + Vite
+# 🚀 Challenge Técnico Tenpo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Descripción
 
-Currently, two official plugins are available:
+Aplicación web desarrollada como parte del proceso de selección para **Talentos de Tecnología en Tenpo**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación implementa un sistema de autenticación fake y una interfaz para visualizar una lista paginada de 2000+ transacciones financieras, demostrando buenas prácticas de desarrollo frontend y arquitectura escalable.
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades Implementadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🔐 Autenticación
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Login fake** con validación de email y contraseña
+- **Token fake** generado automáticamente
+- **Persistencia de sesión** en localStorage
+- **Auto-logout** en caso de token inválido (401)
+- **Protección de rutas** privadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 💰 Transacciones
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Lista paginada** de 2000+ transacciones
+- **Conexión con API propia** para datos optimizados
+- **Filtrado y búsqueda** (preparado para futuras implementaciones)
+- **Estadísticas en tiempo real** por página
+- **UI responsiva** para web y mobile
+
+### 🎨 Interfaz de Usuario
+
+- **Diseño responsivo** adaptado a diferentes dispositivos
+- **Tema oscuro** con paleta de colores de Tenpo
+- **Componentes reutilizables** y consistentes
+- **Estados de carga** y manejo de errores
+- **Navegación intuitiva** con sidebar y navbar
+
+## 🛠️ Tecnologías Utilizadas
+
+### Core
+
+- **React 19.1.1** - Librería de interfaz de usuario
+- **TypeScript 5.8.3** - Tipado estático para JavaScript
+- **Vite 7.1.2** - Build tool y dev server
+
+### Estado y Datos
+
+- **Zustand 5.0.7** - Gestión de estado global
+- **React Query 5.85.0** - Manejo de estado del servidor y cache
+- **Axios 1.11.0** - Cliente HTTP con interceptors
+
+### Estilos
+
+- **TailwindCSS 4.1.11** - Framework de utilidades CSS
+- **PrimeReact 10.9.7** - Componentes UI profesionales
+- **PrimeIcons 7.0.0** - Iconografía consistente
+
+### Routing y Layouts
+
+- **React Router Dom 7.8.0** - Navegación SPA
+- **Layouts modulares** - Contextos público/privado separados
+
+### Desarrollo
+
+- **ESLint + Prettier** - Linting y formateo de código
+- **TypeScript Config** - Configuración estricta de tipos
+
+## 🚀 Instalación y Ejecución
+
+### Prerrequisitos
+
+- **Node.js** 18+ o **Bun** 1.0+
+- **Git**
+
+### Pasos de Instalación
+
+```bash
+# 1. Clonar el repositorio
+git clone [URL_DEL_REPOSITORIO]
+cd tenpo-challenge
+
+# 2. Instalar dependencias (usando Bun - recomendado)
+bun install
+
+# O usando npm
+npm install
+
+# 3. Ejecutar en modo desarrollo
+bun dev
+
+# O usando npm
+npm run dev
+
+# 4. Abrir en el navegador
+# La aplicación estará disponible en: http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Scripts Disponibles
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Desarrollo
+bun dev          # Inicia servidor de desarrollo
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Producción
+bun build        # Construye la aplicación para producción
+bun preview      # Previsualiza el build de producción
+
+# Calidad de Código
+bun lint         # Ejecuta ESLint para verificar código
 ```
+
+## 🔑 Credenciales de Prueba
+
+Para acceder a la aplicación, utiliza **cualquier combinación** de email y contraseña:
+
+```
+📧 Email: cualquier@email.com
+🔒 Contraseña: 123 (mínimo 3 caracteres)
+
+Ejemplos válidos:
+• test@tenpo.com / 123456
+• admin@test.cl / password
+• user@demo.com / 123
+```
+
+**Nota**: La validación es fake, cualquier email válido y contraseña de 3+ caracteres funcionará.
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── app/                    # Configuración global de la app
+│   ├── providers/         # Providers de contexto (Query, Global)
+│   ├── router/           # Componentes de routing (ProtectedRoute)
+│   └── store/            # Stores de Zustand (auth.store)
+│
+├── layouts/              # Layouts reutilizables
+│   ├── AuthLayout        # Layout para páginas públicas
+│   ├── PrivateLayout     # Layout para páginas privadas
+│   └── MainLayout        # Layout principal wrapper
+│
+├── modules/              # Módulos de funcionalidad
+│   ├── auth/            # Módulo de autenticación
+│   │   ├── hooks/       # Custom hooks (useLogin, useLogout)
+│   │   └── pages/       # Páginas del módulo (LoginPage)
+│   │
+│   └── transactions/    # Módulo de transacciones
+│       ├── components/  # Componentes específicos
+│       ├── hooks/       # Custom hooks (useTransactions)
+│       └── pages/       # Páginas del módulo
+│
+├── shared/              # Recursos compartidos
+│   ├── components/      # Componentes reutilizables
+│   │   └── ui/         # Componentes de UI base
+│   ├── hooks/          # Hooks compartidos
+│   ├── services/       # APIs y servicios externos
+│   ├── types/          # Tipos TypeScript compartidos
+│   └── utils/          # Utilidades y helpers
+│
+└── routes.tsx          # Configuración de rutas principales
+```
+
+## 🏗️ Arquitectura y Decisiones Técnicas
+
+### 🎯 Patrones Implementados
+
+- **Clean Architecture** - Separación clara de responsabilidades
+- **Composition over Inheritance** - Composición de componentes
+- **Custom Hooks** - Lógica reutilizable encapsulada
+- **Dependency Injection** - Servicios inyectados via hooks
+
+### 🌐 ApiClient Centralizado (`api.config.ts`)
+
+Una de las implementaciones más destacadas del proyecto es el **ApiClient centralizado**, que encapsula toda la lógica de comunicación HTTP con características enterprise-level:
+
+#### 🔧 **Características Principales**
+
+```typescript
+class ApiClient {
+	// Configuración automática con variable de entorno
+	private static readonly baseURL = import.meta.env.VITE_API_URL;
+
+	// Timeout configurado para evitar requests colgados
+	timeout: 10000;
+}
+```
+
+#### 🛡️ **Interceptors Inteligentes**
+
+**Request Interceptor - Autenticación Automática:**
+
+```typescript
+// Inyecta automáticamente el Bearer token en todas las requests
+if (token && !config.headers.skipAuth) {
+	config.headers.Authorization = `Bearer ${token}`;
+}
+
+// Headers comunes en todas las requests
+config.headers['Content-Type'] = 'application/json';
+config.headers['timezone-offset'] = new Date().getTimezoneOffset().toString();
+```
+
+**Response Interceptor - Manejo de Errores:**
+
+```typescript
+// Auto-logout automático en 401 (token expirado/inválido)
+if (error.response?.status === 401) {
+	useAuthStore.getState().logout();
+}
+
+// Conversión a APIError personalizado con datos estructurados
+throw new APIError(status, data, message);
+```
+
+#### ✨ **Ventajas del ApiClient**
+
+1. **🔐 Autenticación Transparente**
+    - Token se inyecta automáticamente en todas las requests
+    - Opción `skipAuth` para endpoints públicos (login)
+    - Auto-logout en casos de token inválido
+
+2. **🎯 Tipado Estricto**
+    - `ApiRequest` type union para diferentes tipos de requests
+    - Generics para responses tipadas: `send<ResponseType>()`
+    - `APIError` personalizado con status y data estructurados
+
+3. **🛠️ Utilidades Integradas**
+    - `objectToURLParams()` para query parameters automáticos
+    - Construcción inteligente de URLs con parámetros
+    - Headers condicionales según el tipo de request
+
+4. **⚡ Rendimiento y UX**
+    - Timeout configurado para evitar requests infinitas
+    - Timezone automático para requests con fecha/hora
+    - Error handling centralizado y consistente
+
+5. **🔧 Mantenibilidad**
+    - Un solo punto de configuración para todas las APIs
+    - Lógica reutilizable en todas las clases de servicio
+    - Fácil extensión para nuevos interceptors o configuraciones
+
+#### 📋 **Ejemplo de Uso**
+
+```typescript
+// Todas las clases de API extienden ApiClient
+export class TransactionsAPI extends ApiClient {
+	async getTransactions(params?: TransactionQueryParams) {
+		// El token se inyecta automáticamente
+		// Los parámetros se convierten a URLSearchParams automáticamente
+		// Los errores se manejan centralizadamente
+		const response = await this.send<TransactionsResponse>({
+			method: 'get',
+			path: '/transactions',
+			searchParams: this.objectToURLParams(params)
+		});
+
+		return response.data;
+	}
+}
+```
+
+#### 🎖️ **Impacto en la Calidad del Código**
+
+- **DRY (Don't Repeat Yourself)**: Zero repetición de lógica HTTP
+- **Single Responsibility**: Cada método se enfoca solo en la lógica de negocio
+- **Error Consistency**: Manejo uniforme de errores en toda la app
+- **Security**: Autenticación automática sin riesgo de olvidos
+- **Debugging**: Logs centralizados y estructura de errores consistente
+
+### 🔒 Gestión de Estado
+
+- **Zustand + Persist** - Estado de autenticación persistente
+- **React Query** - Cache y sincronización de datos del servidor
+- **Local State** - Estados locales con useState cuando corresponde
+
+### 🛡️ Seguridad y Buenas Prácticas
+
+- **Protected Routes** - Rutas privadas protegidas por autenticación
+- **Token Management** - Manejo automático de tokens en requests
+- **Error Boundaries** - Manejo robusto de errores
+- **Type Safety** - TypeScript estricto en toda la aplicación
+
+### 📱 Responsive Design
+
+- **Mobile First** - Diseño pensado primero para móviles
+- **Breakpoints Adaptativos** - Layouts que se adaptan al dispositivo
+- **Touch Friendly** - Interfaz optimizada para touch
+
+## 🎨 Sistema de Diseño
+
+### Paleta de Colores
+
+- **Primario**: Colores de marca Tenpo
+- **Neutros**: Escalas de grises para texto y fondos
+- **Semánticos**: Success, Error, Warning para estados
+
+### Tipografía
+
+- **Jerarquía clara** - H1, H2, H3, Body1, Body2, Caption
+- **Legibilidad** - Contraste adecuado y tamaños optimizados
+
+## 🔧 Variables de Entorno
+
+```bash
+# .env (opcional)
+VITE_API_URL=https://api-tenpo-challenge.vercel.app  # URL desarrollada por mí
+```
+
+## 📊 Métricas y Rendimiento
+
+- **Bundle Size Optimizado** - Lazy loading de componentes
+- **Caching Inteligente** - React Query para cache de datos
+- **Paginación Eficiente** - Solo carga datos necesarios
+- **TypeScript** - Detección temprana de errores
+
+## 👨‍💻 Desarrollador
+
+**Mauro Agustín Mesa**
+
+- 🌐 LinkedIn: [linkedin.com/in/mauro-agustin-mesa](https://www.linkedin.com/in/mauro-agustin-mesa/)
+- 📧 Email: [mauroagustinmesa@gmail.com](mailto:mauro.agustin.mesa@gmail.com)
+
+---
+
+## 📝 Notas del Challenge
+
+### Requisitos Cumplidos ✅
+
+1. ✅ **Pantalla de login** con fake-login (200-OK + token-fake)
+2. ✅ **Home con API pública** mostrando lista de 2000 elementos (paginada)
+3. ✅ **Botón de logout** que limpia sesión y redirige
+4. ✅ **React + TypeScript responsivo** (web y mobile)
+5. ✅ **Persistencia de token** con Zustand + localStorage
+6. ✅ **Arquitectura escalable** con contextos público/privado
+7. ✅ **Axios configurado** con interceptors para token automático
+8. ✅ **README con documentación** completa
+
+### Decisiones Técnicas Destacadas
+
+- **Paginación vs Carga Masiva**: Implementé paginación para optimizar rendimiento
+- **Backend Propio**: Creé API personalizada para datos más realistas
+- **TypeScript Estricto**: Tipado completo para robustez
+- **Arquitectura Modular**: Preparada para escalar con nuevos módulos
+
+---
+
+_Desarrollado con ❤️👨🏻‍💻 para el proceso de selección_
