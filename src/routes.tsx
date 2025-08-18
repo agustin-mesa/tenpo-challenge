@@ -13,6 +13,10 @@ export const appRouter = createBrowserRouter([
 		element: <MainLayout />,
 		children: [
 			{
+				index: true,
+				element: <LoginPage />
+			},
+			{
 				path: 'auth',
 				element: <AuthLayout />,
 				children: [{ path: 'login', element: <LoginPage /> }]
