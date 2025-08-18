@@ -334,13 +334,6 @@ VITE_API_URL=https://api-tenpo-challenge.vercel.app  # URL desarrollada por mí
 - **Paginación Eficiente** - Solo carga datos necesarios
 - **TypeScript** - Detección temprana de errores
 
-## 👨‍💻 Desarrollador
-
-**Mauro Agustín Mesa**
-
-- 🌐 LinkedIn: [linkedin.com/in/mauro-agustin-mesa](https://www.linkedin.com/in/mauro-agustin-mesa/)
-- 📧 Email: [mauroagustinmesa@gmail.com](mailto:mauro.agustin.mesa@gmail.com)
-
 ---
 
 ## 📝 Notas del Challenge
@@ -424,5 +417,12 @@ Durante el desarrollo, investigué profundamente:
 - Manteniendo la excelencia técnica que Tenpo merece
 
 ---
+
+## 👨‍💻 Desarrollador
+
+**Mauro Agustín Mesa**
+
+- 🌐 LinkedIn: [linkedin.com/in/mauro-agustin-mesa](https://www.linkedin.com/in/mauro-agustin-mesa/)
+- 📧 Email: [mauroagustinmesa@gmail.com](mailto:mauro.agustin.mesa@gmail.com)
 
 _Desarrollado con 💚👨🏻‍💻 para **formar parte del equipo que está revolucionando las finanzas en Latinoamérica**_
