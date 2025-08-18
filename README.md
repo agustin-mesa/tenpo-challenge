@@ -6,6 +6,30 @@ Aplicación web desarrollada como parte del proceso de selección para **Talento
 
 La aplicación implementa un sistema de autenticación fake y una interfaz para visualizar una lista paginada de 2000+ transacciones financieras, demostrando buenas prácticas de desarrollo frontend y arquitectura escalable.
 
+### 💚 **Inspiración en Tenpo**
+
+Este proyecto fue desarrollado con **profunda inspiración en la identidad visual y filosofía de Tenpo**:
+
+🎨 **Design System Inspirado en Tenpo**
+
+- **Paleta de colores**: Implementé los tonos violetas y neutros característicos de la marca
+- **Tipografía**: Jerarquía visual que refleja la claridad y modernidad de Tenpo
+- **Componentes**: Cards de transacciones que evocan la experiencia de la app móvil
+
+🏦 **Experiencia Bancaria Digital**
+
+- **Temática financiera realista**: Transacciones con categorías, montos y comercios
+- **Dashboard estilo fintech**: Estadísticas en tiempo real como en productos bancarios reales
+- **UX familiar**: Navegación intuitiva similar a la experiencia Tenpo
+
+💭 **Filosofía "Todo en un solo lugar"**
+
+- **Sidebar unificada**: Acceso rápido a todas las funcionalidades
+- **Estados de loading**: Transparencia en cada acción, como en la app real
+- **Responsive first**: Pensado para mobile, como el ADN de Tenpo
+
+**Esta no es solo una prueba técnica, sino mi visión de cómo me integraría al equipo Tenpo, creando productos que los usuarios amen usar.** 🚀
+
 ## ✨ Funcionalidades Implementadas
 
 ### 🔐 Autenticación
@@ -321,17 +345,6 @@ VITE_API_URL=https://api-tenpo-challenge.vercel.app  # URL desarrollada por mí
 
 ## 📝 Notas del Challenge
 
-### Requisitos Cumplidos ✅
-
-1. ✅ **Pantalla de login** con fake-login (200-OK + token-fake)
-2. ✅ **Home con API pública** mostrando lista de 2000 elementos (paginada)
-3. ✅ **Botón de logout** que limpia sesión y redirige
-4. ✅ **React + TypeScript responsivo** (web y mobile)
-5. ✅ **Persistencia de token** con Zustand + localStorage
-6. ✅ **Arquitectura escalable** con contextos público/privado
-7. ✅ **Axios configurado** con interceptors para token automático
-8. ✅ **README con documentación** completa
-
 ### Decisiones Técnicas Destacadas
 
 #### 🎯 **Estrategia de Visualización: Paginación Inteligente vs Carga Masiva**
@@ -381,6 +394,35 @@ staleTime: 5 * 60 * 1000,  // 5 min cache por página
 - **TypeScript Estricto**: Tipado completo para robustez
 - **Arquitectura Modular**: Preparada para escalar con nuevos módulos
 
+## 💚 **Conexión Personal con Tenpo**
+
+### 🎯 **Más allá del Challenge Técnico**
+
+Este proyecto representa **mi visión de formar parte del ecosistema Tenpo**. Cada decisión de diseño y desarrollo fue tomada pensando en:
+
+- **🏦 Empatía con los usuarios**: Como Tenpo, busqué simplificar la experiencia financiera
+- **🎨 Coherencia visual**: Adopté la identidad de marca para sentirme parte del equipo
+- **⚡ Performance first**: Priorizando la velocidad que caracteriza a los productos Tenpo
+- **📱 Mobile-centric**: Respetando el ADN móvil de la empresa
+
+### 💭 **Research de la Marca**
+
+Durante el desarrollo, investigué profundamente:
+
+- **🌐 Tenpo.cl**: Estudié la landing page, colores, tipografías y messaging
+- **📱 App móvil**: Analicé los patrones de UX/UI para aplicarlos al challenge
+- **🎯 Filosofía "Todo en un lugar"**: Implementé una experiencia unificada
+- **💚 Branding**: Desde el logo hasta los micro-interactions, todo respira Tenpo
+
+### 🚀 **Mi Visión Como Futuro Tenper**
+
+**No desarrollé solo una prueba técnica, sino un prototipo de cómo contribuiría al producto real:**
+
+- Pensando en escalabilidad para millones de usuarios
+- Optimizando para conexiones lentas de Latinoamérica
+- Priorizando accesibilidad y usabilidad
+- Manteniendo la excelencia técnica que Tenpo merece
+
 ---
 
-_Desarrollado con ❤️👨🏻‍💻 para el proceso de selección_
+_Desarrollado con 💚👨🏻‍💻 para **formar parte del equipo que está revolucionando las finanzas en Latinoamérica**_
