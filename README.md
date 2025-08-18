@@ -393,7 +393,6 @@ staleTime: 5 * 60 * 1000,  // 5 min cache por página
 
 Este proyecto representa **mi visión de formar parte del ecosistema Tenpo**. Cada decisión de diseño y desarrollo fue tomada pensando en:
 
-- **🏦 Empatía con los usuarios**: Como Tenpo, busqué simplificar la experiencia financiera
 - **🎨 Coherencia visual**: Adopté la identidad de marca para sentirme parte del equipo
 - **⚡ Performance first**: Priorizando la velocidad que caracteriza a los productos Tenpo
 - **📱 Mobile-centric**: Respetando el ADN móvil de la empresa
