@@ -71,18 +71,16 @@ const TransactionList = ({
 				</div>
 			</div>
 
-			{/* Transaction Cards List */}
 			<div className="space-y-4">
 				{transactions.map((transaction) => (
 					<TransactionCard key={transaction.id} transaction={transaction} />
 				))}
 			</div>
 
-			{/* Pagination */}
 			{meta && meta.total_pages > 1 && (
 				<div className="mt-8 flex justify-center">
 					<UiPaginator
-						first={(meta.page - 1) * meta.limit}
+						first={meta.page}
 						rows={meta.limit}
 						totalRecords={meta.total}
 						onPageChange={onPageChange}

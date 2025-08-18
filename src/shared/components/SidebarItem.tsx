@@ -13,6 +13,7 @@ export interface ISidebarItem {
 	show?: boolean;
 	children?: ISidebarItem[];
 	command?: () => void;
+	isLoading?: boolean;
 }
 
 interface SidebarItemProps {
@@ -64,10 +65,16 @@ export const SidebarItem = memo(({ item }: SidebarItemProps) => {
 	if (item.command) {
 		return (
 			<button
-				className="hover:bg-v1-primary-500 group flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2.5"
+				className="hover:bg-v1-primary-500 group flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2.5 disabled:cursor-not-allowed disabled:opacity-50"
 				onClick={item.command}
+				disabled={item.isLoading}
 			>
 				<SidebarItemContent item={item} isActive={isActive} />
+				{item.isLoading && (
+					<div className="ml-auto">
+						<i className="pi pi-spin pi-spinner text-v1-neutral-300" />
+					</div>
+				)}
 			</button>
 		);
 	}
