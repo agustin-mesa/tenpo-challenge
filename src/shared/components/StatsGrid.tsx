@@ -1,3 +1,4 @@
+import { helpers } from '../utils/helpers';
 import StatCard from './StatCard';
 import type { ReactNode } from 'react';
 
@@ -19,13 +20,13 @@ interface StatsGridProps {
 const StatsGrid = ({ stats, columns = 3, className, children }: StatsGridProps) => {
 	const gridCols = {
 		1: 'grid-cols-1',
-		2: 'grid-cols-1 md:grid-cols-2',
-		3: 'grid-cols-1 md:grid-cols-3',
-		4: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+		2: 'grid-cols-1 lg:grid-cols-2',
+		3: 'grid-cols-1 lg:grid-cols-3',
+		4: 'grid-cols-1 lg:grid-cols-2 lg:grid-cols-4'
 	};
 
 	return (
-		<div className={`grid gap-4 ${gridCols[columns]} ${className || ''}`}>
+		<div className={helpers.cn('grid gap-4', gridCols[columns], className)}>
 			{stats.map((stat, index) => (
 				<StatCard
 					key={index}

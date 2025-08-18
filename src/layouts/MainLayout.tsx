@@ -18,10 +18,10 @@ const MainLayout = () => {
 	if (!isAuthenticated && pathname.startsWith('/app/')) return <Navigate to={'/auth/login'} />;
 
 	return (
-		<div id="app-layout" className="bg-v1-background flex h-dvh flex-col overflow-x-hidden">
+		<main id="app-layout" className="bg-v1-background flex h-dvh flex-col overflow-x-hidden">
 			<Toaster position="top-right" richColors />
 			<Outlet />
-		</div>
+		</main>
 	);
 };
 

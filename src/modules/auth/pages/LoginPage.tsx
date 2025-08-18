@@ -27,7 +27,7 @@ const LoginPage = () => {
 	};
 
 	return (
-		<div className="flex h-full flex-col items-center justify-center p-4">
+		<div className="relative flex h-full flex-col items-center justify-center p-4">
 			<div className="flex w-full max-w-sm flex-col gap-8">
 				<div className="relative flex h-20 flex-col gap-2 overflow-hidden rounded-full">
 					<img
@@ -88,11 +88,21 @@ const LoginPage = () => {
 					<UiButton
 						variant="primary"
 						label={isLoading ? 'Ingresando...' : 'Ingresar'}
-						className="max-w-40 max-md:w-full max-md:max-w-full"
 						onClick={handleSubmit}
 						disabled={isLoading || !formData.email || !formData.password}
 					/>
 				</div>
+			</div>
+			<div className="absolute right-0 bottom-5 left-0 flex justify-center">
+				<UiText type="body2" className="text-v1-neutral-300">
+					Developed by{' '}
+					<a
+						href="https://www.linkedin.com/in/mauro-agustin-mesa/"
+						className="text-v1-primary-500"
+					>
+						Mauro Agustín Mesa
+					</a>
+				</UiText>
 			</div>
 		</div>
 	);
