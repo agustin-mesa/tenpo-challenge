@@ -1,6 +1,7 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useAuthStore } from '@/app/store/auth.store';
+import { Toaster } from 'sonner';
 
 const MainLayout = () => {
 	const { pathname } = useLocation();
@@ -18,6 +19,7 @@ const MainLayout = () => {
 
 	return (
 		<div id="app-layout" className="bg-v1-background flex h-dvh flex-col overflow-x-hidden">
+			<Toaster position="top-right" richColors />
 			<Outlet />
 		</div>
 	);
