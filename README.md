@@ -404,7 +404,7 @@ Durante el desarrollo, investigué profundamente:
 - **🌐 Tenpo.cl**: Estudié la landing page, colores, tipografías y messaging
 - **📱 App móvil**: Analicé los patrones de UX/UI para aplicarlos al challenge
 - **🎯 Filosofía "Todo en un lugar"**: Implementé una experiencia unificada
-- **💚 Branding**: Desde el logo hasta los micro-interactions, todo respira Tenpo
+- **💚 Branding**: Uso de logo y video
 
 ### 🚀 **Mi Visión Como Futuro Tenper**
 
