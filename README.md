@@ -12,7 +12,7 @@ Este proyecto fue desarrollado con **profunda inspiración en la identidad visua
 
 🎨 **Design System Inspirado en Tenpo**
 
-- **Paleta de colores**: Implementé los tonos violetas y neutros característicos de la marca
+- **Paleta de colores**: Implementé los tonos verdes y neutros característicos de la marca
 - **Tipografía**: Jerarquía visual que refleja la claridad y modernidad de Tenpo
 - **Componentes**: Cards de transacciones que evocan la experiencia de la app móvil
 
