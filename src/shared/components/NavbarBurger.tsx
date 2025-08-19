@@ -24,7 +24,7 @@ const NavbarBurger = () => {
 				</div>
 			</div>
 			{isOpen && (
-				<div className="bg-v1-neutral-950/70 fixed inset-0 z-50 border-b px-6 py-4 backdrop-blur-md">
+				<div className="bg-v1-neutral-950/70 fixed inset-0 z-50 px-6 py-4 backdrop-blur-md">
 					<div className="flex items-center justify-between">
 						<div className="flex items-center gap-2">
 							<img src="/assets/images/tenpo-logo.svg" alt="logo" className="h-8" />
