@@ -41,6 +41,7 @@ const LoginPage = () => {
 							autoPlay
 							muted
 							loop
+							controls={false}
 							className="!size-full object-cover"
 						/>
 					</div>

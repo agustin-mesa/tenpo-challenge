@@ -18,6 +18,7 @@ const AuthLayout = () => {
 					autoPlay
 					muted
 					loop
+					controls={false}
 					className="!size-full object-cover"
 				/>
 			</div>
