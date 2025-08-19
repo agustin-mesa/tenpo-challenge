@@ -20,6 +20,10 @@ const AuthLayout = () => {
 					muted
 					loop
 					controls={false}
+					preload="auto"
+					disablePictureInPicture
+					{...{ 'webkit-playsinline': 'true' }}
+					{...{ 'x-webkit-airplay': 'allow' }}
 					className="!size-full object-cover"
 				/>
 			</div>

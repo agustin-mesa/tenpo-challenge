@@ -43,6 +43,10 @@ const LoginPage = () => {
 							loop
 							controls={false}
 							playsInline
+							preload="auto"
+							disablePictureInPicture
+							{...{ 'webkit-playsinline': 'true' }}
+							{...{ 'x-webkit-airplay': 'allow' }}
 							className="!size-full object-cover"
 						/>
 					</div>
