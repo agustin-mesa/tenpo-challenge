@@ -16,6 +16,7 @@ const AuthLayout = () => {
 				<video
 					src="/assets/videos/tenpo.mp4"
 					autoPlay
+					playsInline
 					muted
 					loop
 					controls={false}

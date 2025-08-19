@@ -42,6 +42,7 @@ const LoginPage = () => {
 							muted
 							loop
 							controls={false}
+							playsInline
 							className="!size-full object-cover"
 						/>
 					</div>
