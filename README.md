@@ -8,7 +8,7 @@ La aplicación implementa un sistema de autenticación fake y una interfaz para 
 
 ### 💚 **Inspiración en Tenpo**
 
-Este proyecto fue desarrollado con **profunda inspiración en la identidad visual y filosofía de Tenpo**:
+Este proyecto fue desarrollado con **inspiración en la identidad visual Tenpo**:
 
 🎨 **Design System Inspirado en Tenpo**
 
