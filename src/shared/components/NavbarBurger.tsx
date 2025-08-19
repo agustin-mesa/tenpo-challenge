@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import { SidebarItem } from './SidebarItem';
 import UiIcon from './ui/UiIcon';
 import { useMenuLogic } from '@/shared/hooks/useMenuLogic';
 import UserProfile from './UserProfile';
 
 const NavbarBurger = () => {
-	const { menuItems } = useMenuLogic();
-	const [isOpen, setIsOpen] = useState(false);
+	const { menuItems, isOpen, setIsOpen } = useMenuLogic();
 
 	return (
 		<>

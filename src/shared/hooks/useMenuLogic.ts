@@ -1,9 +1,11 @@
 import { useLogout } from '@/modules/auth/hooks/useLogout';
 import { toast } from 'sonner';
 import type { ISidebarItem } from '@/shared/components/SidebarItem';
+import { useState } from 'react';
 
 export const useMenuLogic = () => {
 	const logoutMutation = useLogout();
+	const [isOpen, setIsOpen] = useState(false);
 
 	const handleLogout = async () => {
 		try {
@@ -40,6 +42,8 @@ export const useMenuLogic = () => {
 		menuItems,
 		menuBottomItems,
 		handleLogout,
-		isLoggingOut: logoutMutation.isPending
+		isLoggingOut: logoutMutation.isPending,
+		isOpen,
+		setIsOpen
 	};
 };
