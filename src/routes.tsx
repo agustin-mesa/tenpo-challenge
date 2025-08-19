@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import MainLayout from '@/layouts/MainLayout';
 import AuthLayout from '@/layouts/AuthLayout';
 import PrivateLayout from '@/layouts/PrivateLayout';
@@ -14,7 +14,7 @@ export const appRouter = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				element: <LoginPage />
+				element: <Navigate to="/auth/login" replace />
 			},
 			{
 				path: 'auth',
